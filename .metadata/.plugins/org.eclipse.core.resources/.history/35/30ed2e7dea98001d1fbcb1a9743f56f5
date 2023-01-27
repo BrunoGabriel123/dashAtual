@@ -1,0 +1,10 @@
+
+
+var select = document.getElementById('DashHelpDesk')
+
+select.addEventListener('change', function(){
+    console.log(select.value)
+})
+
+
+

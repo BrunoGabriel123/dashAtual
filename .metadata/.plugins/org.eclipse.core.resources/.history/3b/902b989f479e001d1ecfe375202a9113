@@ -1,0 +1,414 @@
+    /*setTimeout(function() {
+  	  window.location.reload(1)
+  	},90000); */
+
+
+function scrollTablePrinciapl() {
+		var scroll = document.querySelector(".table-responsive");
+			
+		//pause o animate quando clica
+		scroll.addEventListener('click', function(e){
+			$(".table-responsive").stop();
+		});
+		
+		//quando tira o mouse volta o scroll
+		  $(".table-responsive").hover(
+		  function() {
+			$(".table-responsive").stop();
+		  }, function() {
+		    // aqui o código quando terminar o houver
+			$(".table-responsive").animate({scrollTop: 0}, 10000);		  }
+		);
+		
+		//inicia ao carregar a página
+		$(".table-responsive").animate({scrollTop: scroll.scrollHeight}, 10000);
+	    scroll.addEventListener('scroll', function() { 
+			
+		   if (this.scrollTop + this.offsetHeight == this.scrollHeight) {
+			  $(".table-responsive").animate({scrollTop: 0}, 10000);
+		   } 
+		
+		   if (this.scrollTop == 0) {
+			  $(".table-responsive").animate({scrollTop: this.scrollHeight}, 10000);
+		    } 
+	    }); 
+}
+
+
+
+function scrollTablePrinciapl2() {
+		var scroll = document.querySelector("#table-responsive2");
+			
+		//pause o animate quando clica
+		scroll.addEventListener('click', function(e){
+			$("#table-responsive2").stop();
+		});
+		
+		//quando tira o mouse volta o scroll
+		  $("#table-responsive2").hover(
+		  function() {
+			$("#table-responsive2").stop();
+		  }, function() {
+		    // aqui o código quando terminar o houver
+			$("#table-responsive2").animate({scrollTop: 0}, 10000);		  }
+		);
+		
+		//inicia ao carregar a página
+		$("#table-responsive2").animate({scrollTop: scroll.scrollHeight}, 10000);
+	    scroll.addEventListener('scroll', function() { 
+			
+		   if (this.scrollTop + this.offsetHeight == this.scrollHeight) {
+			  $("#table-responsive2").animate({scrollTop: 0}, 10000);
+		   } 
+		
+		   if (this.scrollTop == 0) {
+			  $("#table-responsive2").animate({scrollTop: this.scrollHeight}, 10000);
+		    } 
+	    }); 
+}
+
+
+
+function scrollTableParceiro() {
+		var scroll = document.querySelector("#table-parceiro");
+			
+		//pause o animate quando clica
+		scroll.addEventListener('click', function(e){
+			$("#table-parceiro").stop();
+		});
+		
+		//quando tira o mouse volta o scroll
+		  $("#table-parceiro").hover(
+		  function() {
+			$("#table-parceiro").stop();
+		  }, function() {
+		    // aqui o código quando terminar o houver
+			$("#table-parceiro").animate({scrollTop: 0}, 10000);		  }
+		);
+		
+		//inicia ao carregar a página
+		$("#table-parceiro").animate({scrollTop: scroll.scrollHeight}, 10000);
+	    scroll.addEventListener('scroll', function() { 
+			
+		   if (this.scrollTop + this.offsetHeight == this.scrollHeight) {
+			  $("#table-parceiro").animate({scrollTop: 0}, 10000);
+		   } 
+		
+		   if (this.scrollTop == 0) {
+			  $("#table-parceiro").animate({scrollTop: this.scrollHeight}, 10000);
+		    } 
+	    }); 
+}
+
+
+
+
+function scrollTableCateg() {
+		var scroll = document.querySelector("#table-categ");
+			
+		//pause o animate quando clica
+		scroll.addEventListener('click', function(e){
+			$("#table-categ").stop();
+		});
+		
+		//quando tira o mouse volta o scroll
+		  $("#table-categ").hover(
+		  function() {
+			$("#table-categ").stop();
+		  }, function() {
+		    // aqui o código quando terminar o houver
+			$("#table-categ").animate({scrollTop: 0}, 10000);		  }
+		);
+		
+		//inicia ao carregar a página
+		$("#table-categ").animate({scrollTop: scroll.scrollHeight}, 10000);
+	    scroll.addEventListener('scroll', function() { 
+			
+		   if (this.scrollTop + this.offsetHeight == this.scrollHeight) {
+			  $("#table-categ").animate({scrollTop: 0}, 10000);
+		   } 
+		
+		   if (this.scrollTop == 0) {
+			  $("#table-categ").animate({scrollTop: this.scrollHeight}, 10000);
+		    } 
+	    }); 
+}
+
+
+
+function scrollTableSoluc() {
+		var scroll = document.querySelector("#table-solucao");
+			
+		//pause o animate quando clica
+		scroll.addEventListener('click', function(e){
+			$("#table-solucao").stop();
+		});
+		
+		//quando tira o mouse volta o scroll
+		  $("#table-solucao").hover(
+		  function() {
+			$("#table-solucao").stop();
+		  }, function() {
+		    // aqui o código quando terminar o houver
+			$("#table-solucao").animate({scrollTop: 0}, 10000);		  }
+		);
+		
+		//inicia ao carregar a página
+		$("#table-solucao").animate({scrollTop: scroll.scrollHeight}, 10000);
+	    scroll.addEventListener('scroll', function() { 
+			
+		   if (this.scrollTop + this.offsetHeight == this.scrollHeight) {
+			  $("#table-solucao").animate({scrollTop: 0}, 10000);
+		   } 
+		
+		   if (this.scrollTop == 0) {
+			  $("#table-solucao").animate({scrollTop: this.scrollHeight}, 10000);
+		    } 
+	    }); 
+}
+
+
+
+
+
+function scrollTableProd() {
+		var scroll = document.querySelector("#table-prod");
+			
+		//pause o animate quando clica
+		scroll.addEventListener('click', function(e){
+			$("#table-prod").stop();
+		});
+		
+		//quando tira o mouse volta o scroll
+		  $("#table-prod").hover(
+		  function() {
+			$("#table-prod").stop();
+		  }, function() {
+		    // aqui o código quando terminar o houver
+			$("#table-prod").animate({scrollTop: 0}, 10000);		  }
+		);
+		
+		//inicia ao carregar a página
+		$("#table-prod").animate({scrollTop: scroll.scrollHeight}, 10000);
+	    scroll.addEventListener('scroll', function() { 
+			
+		   if (this.scrollTop + this.offsetHeight == this.scrollHeight) {
+			  $("#table-prod").animate({scrollTop: 0}, 10000);
+		   } 
+		
+		   if (this.scrollTop == 0) {
+			  $("#table-prod").animate({scrollTop: this.scrollHeight}, 10000);
+		    } 
+	    }); 
+}
+
+
+
+function scrollTableVenc() {
+		var scroll = document.querySelector("#table-venc");
+			
+		//pause o animate quando clica
+		scroll.addEventListener('click', function(e){
+			$("#table-venc").stop();
+		});
+		
+		//quando tira o mouse volta o scroll
+		  $("#table-venc").hover(
+		  function() {
+			$("#table-venc").stop();
+		  }, function() {
+		    // aqui o código quando terminar o houver
+			$("#table-venc").animate({scrollTop: 0}, 10000);		  }
+		);
+		
+		//inicia ao carregar a página
+		$("#table-venc").animate({scrollTop: scroll.scrollHeight}, 10000);
+	    scroll.addEventListener('scroll', function() { 
+			
+		   if (this.scrollTop + this.offsetHeight == this.scrollHeight) {
+			  $("#table-venc").animate({scrollTop: 0}, 10000);
+		   } 
+		
+		   if (this.scrollTop == 0) {
+			  $("#table-venc").animate({scrollTop: this.scrollHeight}, 10000);
+		    } 
+	    }); 
+}
+
+
+
+
+
+
+function scrollTableUrg() {
+		var scroll = document.querySelector("#table-urg");
+			
+		//pause o animate quando clica
+		scroll.addEventListener('click', function(e){
+			$("#table-urg").stop();
+		});
+		
+		//quando tira o mouse volta o scroll
+		  $("#table-urg").hover(
+		  function() {
+			$("#table-urg").stop();
+		  }, function() {
+		    // aqui o código quando terminar o houver
+			$("#table-urg").animate({scrollTop: 0}, 10000);		  }
+		);
+		
+		//inicia ao carregar a página
+		$("#table-urg").animate({scrollTop: scroll.scrollHeight}, 10000);
+	    scroll.addEventListener('scroll', function() { 
+			
+		   if (this.scrollTop + this.offsetHeight == this.scrollHeight) {
+			  $("#table-urg").animate({scrollTop: 0}, 10000);
+		   } 
+		
+		   if (this.scrollTop == 0) {
+			  $("#table-urg").animate({scrollTop: this.scrollHeight}, 10000);
+		    } 
+	    }); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  function dataAtualFormatada(){
+      var data = new Date(),
+          dia   = data.getDate().toString(),
+          diaF  = (dia.length == 1) ? '0' + dia : dia,
+          mes   = (data	.getMonth() + 1).toString(), //+1 pois no getMonth Janeiro começa com zero.
+          mesF  = (mes.length  == 1) ? '0' + mes : mes,
+          anoF  = data.getFullYear();
+      return diaF + "/"+ mesF + "/"+ anoF;   
+  }
+
+
+	var semana = ["Domingo", "Segunda-Feira", "Terca-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+  	var d  = new Date();
+
+  console.log(dataAtualFormatada());
+  document.getElementById("elemento").innerHTML += dataAtualFormatada() + " " +semana[d.getDay()] + " "  + new Date().toLocaleTimeString() + " ";   
+
+
+$( document ).ready(function() {
+	scrollTablePrinciapl();
+	scrollTablePrinciapl2();
+	scrollTableParceiro();
+	scrollTableCateg();
+	scrollTableSoluc();
+	scrollTableVenc();
+		scrollTableUrg();
+	let qtdeInicial = document.querySelector('#numberInicial').innerHTML; 
+
+	if(qtdeInicial == 0){
+		let div1 = document.querySelector('.nInicial');
+        let div2 = document.querySelector('.quadradoInicial');
+        let nInicial2 = document.querySelector('.nInicial2');
+        let numero = document.querySelector('.numero');
+
+		div1.classList.add('js-style-inicial');
+        div2.classList.add('js-style-inicial');
+        nInicial2.classList.add('js-style-inicial');;		
+		//parar animacao que está inline
+	}
+});
+
+
+	function movimentaScroll2(){
+      $('.table table-bordered table-3 text-center table-striped').animate({ scrollTop: $(".infos2").offset()['top']}, 40000);
+      $('.infos2').animate({ scrollTop: $(".linha").offset()['top']}, 40000);
+  }
+  setInterval(movimentaScroll2, 10000);
+
+  function movimentaScroll3(){
+	  $('.our-blog page-section-ptb').animate({ scrollTop: $(".infos2").offset()['top']}, 40000);
+      $('.infos2').animate({ scrollTop: $(".linha").offset()['top']}, 40000);
+  }
+  setInterval(movimentaScroll3, 10000);
+
+
+	$('table').on('scroll', function() {
+    	$("table > *").width($("table").width() + $("table").scrollLeft());
+	});
+  document.getElementById("elemento").innerHTML('tabelaBacklog') = innerHeight = 300;
+
+  let checkbox = document.querySelectorAll('flexCheckChecked');
+  let btnCheck = document.getElementById('enviar');
+
+  	btnCheck.addEventListener('click', () => {
+  		for(let current of checkbox) {
+  			current.checked = !current.checked
+  		}
+  	})
+
+	var botaoAdicionar= document.querySelector("#teste123");
+	botaoAdicionar.addEventListener("click", function(){
+    	console.log("FUI CLICADO!!!");
+	});
+	
+	
+	function movimentaScroll5(){
+      $('.col-lg-4 col-md-4 xs-mb-30').animate({ scrollTop: $(".test").offset()['top']}, 40000); 
+      $('.test').animate({ scrollTop: $(".col-lg-4 col-md-4 xs-mb-30").offset()['top']}, 40000);
+  }
+  setInterval(movimentaScroll5, 10000);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

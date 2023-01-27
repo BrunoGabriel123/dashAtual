@@ -1,0 +1,132 @@
+    /*setTimeout(function() {
+  	  window.location.reload(1)
+  	},90000); */
+
+
+function scrollTablePrinciapl() {
+	var scroll = document.querySelector(".table-responsive");
+		
+	  var elem = $(".table-responsive");
+	  
+	  // quando o mouse estiver sobre o elemento
+	  elem.bind('mouseover', function(event){
+
+		console.log("clicado");
+	  });
+	
+	  // evento quando o foco do mouse estiver fora do elemento
+	  elem.bind(onmouseleave, function(event){
+		    
+		console.log("não clicado");
+		$(".table-responsive").animate({scrollTop: scroll.scrollHeight}, 10000);
+		
+	//    scroll.addEventListener('scroll', function() { 
+		       if (scroll.scrollTop + scroll.offsetHeight == scroll.scrollHeight) {
+		           console.log('VOLTAR PRO INICIO');
+			       $(".table-responsive").animate({scrollTop: 0}, 10000);
+		       } 
+		
+		       if (this.scrollTop == 0) {
+		           console.log('VOLTAR PRO FINAL');
+				   $(".table-responsive").animate({scrollTop: scroll.scrollHeight}, 10000);
+		       } 
+	    }); 
+	//  });
+
+}
+
+
+  function dataAtualFormatada(){
+      var data = new Date(),
+          dia   = data.getDate().toString(),
+          diaF  = (dia.length == 1) ? '0' + dia : dia,
+          mes   = (data	.getMonth() + 1).toString(), //+1 pois no getMonth Janeiro começa com zero.
+          mesF  = (mes.length  == 1) ? '0' + mes : mes,
+          anoF  = data.getFullYear();
+      return diaF + "/"+ mesF + "/"+ anoF;   
+  }
+
+
+	var semana = ["Domingo", "Segunda-Feira", "Terca-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+  	var d  = new Date();
+
+  console.log(dataAtualFormatada());
+  document.getElementById("elemento").innerHTML += dataAtualFormatada() + " " +semana[d.getDay()] + " "  + new Date().toLocaleTimeString() + " ";   
+
+
+$( document ).ready(function() {
+	scrollTablePrinciapl();
+
+	let qtdeInicial = document.querySelector('#numberInicial').innerHTML; 
+
+	if(qtdeInicial == 0){
+		let div1 = document.querySelector('.nInicial');
+        let div2 = document.querySelector('.quadradoInicial');
+        let nInicial2 = document.querySelector('.nInicial2');
+        let numero = document.querySelector('.numero');
+
+		div1.classList.add('js-style-inicial');
+        div2.classList.add('js-style-inicial');
+        nInicial2.classList.add('js-style-inicial');;		
+		//parar animacao que está inline
+	}
+});
+
+
+	function movimentaScroll2(){
+      $('.table table-bordered table-3 text-center table-striped').animate({ scrollTop: $(".infos2").offset()['top']}, 40000);
+      $('.infos2').animate({ scrollTop: $(".linha").offset()['top']}, 40000);
+  }
+  setInterval(movimentaScroll2, 10000);
+
+  function movimentaScroll3(){
+	  $('.our-blog page-section-ptb').animate({ scrollTop: $(".infos2").offset()['top']}, 40000);
+      $('.infos2').animate({ scrollTop: $(".linha").offset()['top']}, 40000);
+  }
+  setInterval(movimentaScroll3, 10000);
+
+
+	$('table').on('scroll', function() {
+    	$("table > *").width($("table").width() + $("table").scrollLeft());
+	});
+  document.getElementById("elemento").innerHTML('tabelaBacklog') = innerHeight = 300;
+
+  let checkbox = document.querySelectorAll('flexCheckChecked');
+  let btnCheck = document.getElementById('enviar');
+
+  	btnCheck.addEventListener('click', () => {
+  		for(let current of checkbox) {
+  			current.checked = !current.checked
+  		}
+  	})
+
+	var botaoAdicionar= document.querySelector("#teste123");
+	botaoAdicionar.addEventListener("click", function(){
+    	console.log("FUI CLICADO!!!");
+	});
+	
+	
+	function movimentaScroll5(){
+      $('.col-lg-4 col-md-4 xs-mb-30').animate({ scrollTop: $(".test").offset()['top']}, 40000); 
+      $('.test').animate({ scrollTop: $(".col-lg-4 col-md-4 xs-mb-30").offset()['top']}, 40000);
+  }
+  setInterval(movimentaScroll5, 10000);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

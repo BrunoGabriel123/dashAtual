@@ -1,0 +1,37 @@
+package br.com.dogo.helpdeskdashboard.workday.dto.widgets;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+import br.com.dogo.helpdeskdashboard.commons.dto.AbstractHelpDeskDashboard;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+
+@Getter @EqualsAndHashCode(of = {"categoryName"}, callSuper = false)
+public class TicketPorCategoriaDTO extends AbstractHelpDeskDashboard implements Serializable, Comparable<TicketPorCategoriaDTO> {
+	
+	private static final long serialVersionUID = 1L;
+	private static final String WIDGET_NAME = "Tickets por Categoria";
+
+	private final String categoryName;
+	private Long value = 0l;
+
+	@Builder
+	public TicketPorCategoriaDTO(String categoryName) {
+		super(TicketPorCategoriaDTO.WIDGET_NAME);
+		this.categoryName = categoryName;
+	}
+	
+	public void incrementValue() {
+		++this.value;
+	}
+
+	@Override
+	public int compareTo(TicketPorCategoriaDTO anotherTicket) {
+		if(Objects.isNull(anotherTicket) || Objects.isNull(anotherTicket.getValue())) {
+			return -1;
+		}
+		return this.value.compareTo(anotherTicket.getValue());
+	}
+}

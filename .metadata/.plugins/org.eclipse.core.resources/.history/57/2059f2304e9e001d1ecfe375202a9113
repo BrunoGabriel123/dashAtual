@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<%@page import="br.com.dogo.helpdeskdashboard.workday.dto.widgets.TicketPorParceiroDTO"%>
+<%@page import="br.com.dogo.helpdeskdashboard.workday.dto.widgets.TicketPorCategoriaDTO"%>
+<%@page import="br.com.dogo.helpdeskdashboard.workday.controller.DashboardWorkdayController"%>
+<%@page import="br.com.dogo.helpdeskdashboard.workday.dto.widgets.TicketDTO"%>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Webster - Responsive Multi-purpose HTML5 Template" />
+    <meta name="author" content="potenzaglobalsolutions.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Dashboard HelpDesk</title>
+
+    <!-- Favicon -->
+        <link rel="icon" type="image/png" href="icons/favicon.ico" />
+
+    <!-- font -->
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,500i,600,700,800,900|Poppins:200,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900">
+
+    <!-- Plugins -->
+    <link rel="stylesheet" type="text/css" href="css/plugins-css.css" />
+
+    <!-- Typography -->
+    <link rel="stylesheet" type="text/css" href="css/typography.css" />
+
+    <!-- Shortcodes -->
+    <link rel="stylesheet" type="text/css" href="css/shortcodes/shortcodes.css" />
+
+    <!-- Style      -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+<script>
+
+</script>
+</head>
+
+<style>
+.col-lg-4 {
+    -ms-flex: 0 0 33.333333% !important;
+    flex: -7 0 -18.666667% !important;
+    max-width: 19.333333% !important;
+}
+</style>
+<%@page import="br.com.dogo.helpdeskdashboard.*"%>
+<%@page import="java.util.*"%>
+<%@page import="br.com.dogo.helpdeskdashboard.workday.*"%>
+<%@page import="br.com.dogo.helpdeskdashboard.workday.dto.*"%>
+
+<body>
+<%
+String cParm = request.getParameter("Parametros");
+java.util.StringTokenizer Line = new java.util.StringTokenizer(cParm,"|");
+String paramTime = null;
+try {
+	paramTime = (String)Line.nextElement();
+} catch(Exception e){
+	out.println(e);
+}
+
+
+DashboardWorkdayController test = new DashboardWorkdayController();
+HelpdeskDashboardWorkdayDTO result = test.loadWorkdayData(null);
+
+long resultadoFinal = result.getTicketsInicial();
+%>
+<div class="inicio">
+    <p id="elemento" style="color: black;">
+    Tickets vencem amanhã: 
+    <%=result.getTicketsInicial()%>
+    
+    Total Tickets em aberto:   
+    <%=result.getTicketsInicial()%>          
+    
+</p>
+    <p id="elemento2"></p>  
+</div>
+<p class="linha" style="display: none;"></p>
+
+<form>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    ADM
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    CLI
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    COM
+  </label>
+</div>
+
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    DBA
+  </label>
+</div>
+
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    DIR
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    DKT
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    INF
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    INV
+  </label>
+</div>
+
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    PRD
+  </label>
+</div>
+
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    QA
+  </label>
+</div>
+
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    REL
+  </label>
+</div>
+
+
+
+
+</form>
+
+<div class="col-lg-12 col-md-12" id="tableesq" style="margin-top: 10px;display:inline-flex" id="area">
+    <div class="table-responsive" >
+        <table class="table table-bordered table-3 text-center table-striped" id="table" style="position: sticky;" >
+            <thead>
+            <tr>
+                <br>
+                <th id="teste123" style="background-color: #F48220;">Ticket</th>
+                <th style="background-color: #F48220;">Cliente</th>
+                <th style="background-color: #F48220;">Status</th>
+                <th style="background-color: #F48220;">Dono</th>
+                <th style="background-color: #F48220;">Prioridade</th>
+                <th style="background-color: #F48220;">Texto</th>
+            </tr>
+        <tr class="tabled" style="position: sticky; top:86%;">
+                <th style="background-color: #F48220;text-align: center;">Total: </th>
+                <th style="background-color: #F48220;"></th>
+                <th style="background-color: #F48220;"></th>
+                <th style="background-color: #F48220;"></th>
+                <th style="background-color: #F48220;"></th>
+                <th style="background-color: #F48220;text-align: end !important">30</th>
+      	</tr>            
+<%
+DashboardWorkdayController controller = new DashboardWorkdayController();
+HelpdeskDashboardWorkdayDTO dashboardCarregada = controller.loadWorkdayData(null);
+
+for(TicketDTO dash : dashboardCarregada.getTickets()) {
+%>
+            </thead>
+            <tbody>
+            <tr>
+                <td><%=dash.getNumber()%></td>
+                <td><%=dash.getPartnerName()%></td>
+                <td><%=dash.getStatus()%></td>
+                <td><%=dash.getOwner()%></td>
+                <td ><%=dash.getPrecedence()%></td>
+                <td maxlength="2"><%=dash.getText()%></td>
+            </tr>
+            
+<% 
+}
+%>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+<section class="our-blog page-section-ptb">
+    <div class="container">
+        <div class="row" style="    gap: 19px;">
+        
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 xs-mb-30" >
+                <div class="blog-box  blog-1 h-100">
+                    <div class="blog-info">
+                    <br>
+                        <div  style="text-align: center;font-size: 20px;color: #F48220;" > Inicial</div>
+                        <hr style="background-color: #ddd;">
+                        <br />
+                        
+                        <p style="font-size: 69px; text-align: center;"><%=dashboardCarregada.getTicketsInicial()%></p>  
+                    </div>                    
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4" >
+            <div class="blog-box  blog-1 h-100" id="table-responsive2" style="max-width: 100%;overflow: scroll;height: 220px !important;overflow: auto;">
+                    <div class="blog-info">
+                    <br>
+                       <div  style="text-align: center;font-size: 20px;color:#F48220;background-color:white;    position: sticky; top: 0;"class="titulo" >Ligações do Dia</div>
+                      <table class="table table-striped">
+
+            <tbody>
+<%
+  	for(TicketPorParceiroDTO dash : dashboardCarregada.getTicketsPorParceiro()) {
+%>
+            <tr>
+                <td ><%=dash.getPartnerName()%></td>
+                <td style="padding-left: 10px;padding-right: 5px;text-align: center;">
+					<%=dash.getValue()%>
+                </td>
+                <td style="display: none;"></td>
+            </tr>
+
+<%
+   }
+%>  
+							 </tbody>     
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 xs-mb-30" >
+                <div class="blog-box  blog-1 h-100" id="table-parceiro"  style="max-width: 100%;overflow: scroll;height: 220px !important;overflow: auto;">
+                    <div class="blog-info">
+                    <br>
+                         <div style="text-align: center;font-size: 20px;color:#F48220;background-color:white;    position: sticky; top: 0;"> <a href="#" class="titulo">Parceiro</a></div>
+                        <table class="table table-striped">
+
+            <tbody>
+<%
+  	for(TicketPorParceiroDTO dash : dashboardCarregada.getTicketsPorParceiro()) {
+%>
+            <tr>
+                <td ><%=dash.getPartnerName()%></td>
+                <td style="padding-left: 10px;padding-right: 5px;text-align: center;">
+					<%=dash.getValue()%>
+                </td>
+                <td style="display: none;"></td>
+            </tr>
+
+<%
+   }
+%>  
+
+      
+            </tbody>     
+     </table>
+ </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 xs-mb-30" >
+                 <div class="blog-box  blog-1 h-100" id="table-categ" style="max-width: 100%;overflow: scroll;height: 220px !important; overflow: auto;">
+                    <div class="blog-info">
+                    <br>
+                        <div style="text-align: center;font-size: 20px;color:#F48220;background-color:white;    position: sticky; top: 0;" > <a href="#"  class="titulo">Categoria</a></div>
+                        
+                        <table class="table table-striped">
+            <tbody>
+<%
+  	for(TicketPorParceiroDTO dash : dashboardCarregada.getTicketsPorParceiro()) {
+%>
+            <tr>
+                <td ><%=dash.getPartnerName()%></td>
+                <td style="padding-left: 10px;padding-right: 5px;text-align: center;">
+					<%=dash.getValue()%>
+                </td>
+                <td style="display: none;"></td>
+            </tr>
+
+<%
+   }
+%>    
+            </tbody>     
+                        </table>
+						 </div>
+                </div>
+            </div>         
+            
+             <div class="col-lg-4 col-md-4 xs-mb-30" >
+                 <div class="blog-box  blog-1 h-100" id="table-solucao" style="max-width: 100%;overflow: scroll;height: 220px !important; overflow: auto;">
+                    <div class="blog-info">
+                    <br>
+                        <div style="text-align: center;font-size: 20px;color:#F48220;background-color:white;    position: sticky; top: 0;" > <a href="#"  class="titulo">T.Solucionado</a></div>
+                        
+                        <table class="table table-striped">
+            <tbody>
+<%
+  	for(TicketPorParceiroDTO dash : dashboardCarregada.getTicketsPorParceiro()) {
+%>
+            <tr>
+                <td ><%=dash.getPartnerName()%></td>
+                <td style="padding-left: 10px;padding-right: 5px;text-align: center;">
+					<%=dash.getValue()%>
+                </td>
+                <td style="display: none;"></td>
+            </tr>
+
+<%
+   }
+%>  
+
+      
+            </tbody>     
+                        </table>
+						 </div>
+                </div>
+            </div>         
+</section>
+
+<section class="our-blog page-section-ptb">
+    <div class="container">
+        <div class="row" style="gap: 19px;">
+                	
+        </div>
+        <div class="row">	 
+            <div class="col-lg-4 col-md-4" >
+                <div class="blog-box  blog-1 h-100" id="table-prod" style="max-width: 100%;overflow: scroll;height: 220px !important;overflow: auto;">
+                    <div class="blog-info">
+                    <br>
+						<div  style="text-align: center;font-size: 20px;color:#F48220;background-color:white;    position: sticky; top: 0;"class="titulo"><a href="#" class="titulo">Prod</a></div>
+                       <table class="table table-striped">
+
+            <tbody>
+<%
+  	for(TicketPorParceiroDTO dash : dashboardCarregada.getTicketsPorParceiro()) {
+%>
+            <tr>
+                <td ><%=dash.getPartnerName()%></td>
+                <td style="padding-left: 10px;padding-right: 5px;text-align: center;">
+					<%=dash.getValue()%>
+                </td>
+                <td style="display: none;"></td>
+            </tr>
+
+<%
+   }
+%>  
+
+      
+            </tbody>     
+                            
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 xs-mb-30" >
+                <div class="blog-box  blog-1 h-100" id="table-venc" style="max-width: 100%;overflow: scroll;height: 220px !important;overflow: auto;">
+                    <div class="blog-info">
+                    <br>
+                        <div  style="text-align: center;font-size: 20px;color:#F48220;background-color:white;    position: sticky; top: 0;">Vencidos</a></div>
+                        <table class="table table-striped">
+            <tbody>
+<%
+  	for(TicketPorParceiroDTO dash : dashboardCarregada.getTicketsPorParceiro()) {
+%>
+            <tr >
+                <td ><%=dash.getPartnerName()%></td>
+                <td style="padding-left: 10px;padding-right: 5px;text-align: center;">
+					<%=dash.getValue()%>
+                </td>
+                <td style="display: none;"></td>
+            </tr>
+
+<%
+   }
+%>  
+
+      
+            </tbody>     
+                        </table>
+                    </div>
+                </div>
+            </div>              
+            
+                        <div class="col-lg-4 col-md-4 xs-mb-30" >
+                <div class="blog-box  blog-1 h-100" id="table-urg" style="max-width: 100%;overflow: scroll;height: 220px !important;overflow: auto;">
+                    <div class="blog-info">
+                    <br>
+                        <div  style="text-align: center;font-size: 20px;color:#F48220;background-color:white;    position: sticky; top: 0;">Urgente</a></div>
+                        <table class="table table-striped">
+            <tbody>
+<%
+  	for(TicketPorParceiroDTO dash : dashboardCarregada.getTicketsPorParceiro()) {
+%>
+            <tr>
+                <td><%=dash.getPartnerName()%></td>
+                <td style="padding-left: 10px;padding-right: 5px;text-align: center;">
+					<%=dash.getValue()%>
+                </td>
+                <td style="display: none;"></td>
+            </tr>
+
+<%
+   }
+%>  
+
+      
+            </tbody>     
+                        </table>
+                    </div>
+                </div>
+            </div>    
+            
+            
+                       <div class="col-lg-4 col-md-4 xs-mb-30" >
+                <div class="blog-box  blog-1 h-100" id="table-sprint" style="max-width: 100%;overflow: scroll;height: 220px !important;overflow: auto;">
+                    <div class="blog-info">
+                    <br>
+                        <div  style="text-align: center;font-size: 20px;color:#F48220;background-color:white;    position: sticky; top: 0;">Sprint</a></div>
+                        <table class="table table-striped">
+            <tbody>
+<%
+  	for(TicketPorParceiroDTO dash : dashboardCarregada.getTicketsPorParceiro()) {
+%>
+            <tr>
+                <td ><%=dash.getPartnerName()%></td>
+                <td style="padding-left: 10px;padding-right: 5px;text-align: center;">
+					<%=dash.getValue()%>
+                </td>
+                <td style="display: none;"></td>
+            </tr>
+
+<%
+   }
+%>  
+							</tbody>     
+                        </table>
+                    </div>
+                </div>
+            </div>    
+            
+            
+            <div class="col-lg-4 col-md-4 xs-mb-30" >
+                <div class="blog-box  blog-1 h-100" id="table-Status"style="max-width: 100%;overflow: scroll;height: 220px !important;overflow: auto;">
+                    <div class="blog-info">
+                    <br>
+                    <div >
+					<table class="table table-striped">
+                         <thead>
+                        <div style="text-align: center;font-size: 20px;color:#F48220;background-color:white;    position: sticky; top: 0;"> 
+                        	Tickets Por Status
+                        </div>
+						</thead>
+            <tbody>
+<%
+  	for(TicketPorParceiroDTO dash : dashboardCarregada.getTicketsPorParceiro()) {
+%>
+            <tr>
+                <td><%=dash.getPartnerName()%></td>
+                <td style="padding-left: 10px;padding-right: 5px;text-align: center;">
+					<%=dash.getValue()%>
+                </td>
+                <td class="test" style="display: none;"></td>
+            </tr>
+<%
+  	}
+%>  
+ </tbody>     
+                        </table>
+                    </div>
+                </div>
+            </div>              
+</section>
+<div id="back-to-top"><a class="top arrow" href="#top"><i class="fa fa-angle-up"></i><span>TOP</span></a></div>
+
+</div>
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/plugins-jquery.js"></script>
+<script>var plugin_path = 'js/';</script>
+<p class="infos2"></p>
+<script src="js/custom.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/parametro.js"></script>
+
+	<div class="footer">
+
+	</div>
+
+
+</body>
+</html>

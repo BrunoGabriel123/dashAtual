@@ -1,0 +1,646 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Webster - Responsive Multi-purpose HTML5 Template" />
+    <meta name="author" content="potenzaglobalsolutions.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Dashboard HelpDesk</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <!-- font -->
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,500i,600,700,800,900|Poppins:200,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900">
+
+    <!-- Plugins -->
+    <link rel="stylesheet" type="text/css" href="css/plugins-css.css" />
+
+    <!-- Typography -->
+    <link rel="stylesheet" type="text/css" href="css/typography.css" />
+
+    <!-- Shortcodes -->
+    <link rel="stylesheet" type="text/css" href="css/shortcodes/shortcodes.css" />
+
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+
+</head>
+
+<body>
+<div class="inicio" >
+    <p id="elemento" style="color: black;font-size: 20px;"></p>
+    <p id="elemento2"></p>
+</div>
+<p class="linha" style="display: none"></p>
+
+<div class="col-lg-12 col-md-12" id="tableesq" style="margin-top: 10px;display: inline-flex">
+    <div class="table-responsive">
+        <table class="table table-bordered table-3 text-center table-striped" >
+            <thead>
+            <tr>
+                <th style="background-color: #F48220;">Ticket</th>
+                <th style="background-color: #F48220;">Cliente</th>
+                <th style="background-color: #F48220;">Status</th>
+                <th style="background-color: #F48220;">Dono</th>
+                <th style="background-color: #F48220;">Prioridade</th>
+                <th style="background-color: #F48220;">Texto</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td maxlength="2">Column content Text askdhjsiad</td>
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+
+            <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+
+            <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+
+            <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+
+
+            <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+
+            <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+
+            <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+
+
+            <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+
+            <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+
+
+            <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+
+
+            <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+
+
+            <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="table-responsive" id="tables" style=" width: 169px;">
+        <table class="table table-bordered table-3 text-center table-striped" >
+            <thead>
+            <tr>
+                <th style="background-color: #F48220;text-align: center;">Empresa</th>
+                <th style="background-color: #F48220;"></th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                   10
+                </td>
+            </tr>
+
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+            </tr>
+
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+            </tr>
+
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-responsive" id="tables" style="width: 330px;">
+        <table class="table table-bordered table-3 text-center table-striped" >
+            <thead>
+            <tr>
+                <th style="background-color: #F48220;">Categoria</th>
+                <th style="background-color: #F48220;"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+
+            </tr>
+            <tr>
+                <td>Column content</td>
+                <td style="padding-left: 10px;    padding-right: 5px;">
+                    10
+                </td>
+
+            </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+</div>
+<section class="our-blog page-section-ptb">
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 xs-mb-30">
+                <div class="blog-box  blog-1 h-100">
+                    <div class="blog-info">
+                        <h4 style="text-align: center;font-size: 30px;" > <a href="#"class="titulo">Inicial</a></h4>
+                        <hr style="background-color: black; border: 1px solid #ddd;">
+                        <p style="text-align: center;font-size: 75px;">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col" class="th" style="color: darkslategrey;">Lord</th>
+                                <th scope="col" class="th" style="color: green;">Wall</th>
+                                <th scope="col" class="th" style="color: blue;">Matrix</th>
+                                <th scope="col" class="th" style="color: #F48220;">Reports</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th style="font-size: 18px;color: darkslategrey;text-align: center">1</th>
+                                <td style="font-size: 18px;color: green;text-align: center">2</td>
+                                <td style="font-size: 18px;color: blue;text-align: center">3</td>
+                                <td style="font-size: 18px;color: #F48220;text-align: center">3</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="blog-box  blog-1 h-100">
+                    <div class="blog-info">
+                        <h4 style="text-align: center;font-size: 30px;" class="titulo"> <a href="#" class="titulo">Vencidos</a></h4>
+                        <hr style="background-color: black; border: 1px solid #ddd;">
+                        <p style="text-align: center;font-size: 75px;">
+
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col" style="font-size: 25px;animation: piscaPisca 5s infinite;" class="prox">Dogo</th>
+                                <th scope="col" style="font-size: 25px;animation: piscaPisca 5s infinite;" class="prox">Cliente</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th  style="font-size: 18px;text-align: center;animation: piscaPisca 5s infinite;">1</th>
+                                <td style="font-size: 18px;text-align: center;animation: piscaPisca 5s infinite;">2</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 xs-mb-30">
+                <div class="blog-box  blog-1 h-100">
+                    <div class="blog-info">
+                        <h4 style="text-align: center;font-size: 30px;"> <a href="#"  class="titulo">Urgente</a></h4>
+                        <hr style="background-color: black; border: 1px solid #ddd;">
+                        <p style="text-align: center;font-size: 75px;">
+
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col" class="th" style="color: darkslategrey;">Lord</th>
+                                <th scope="col" class="th" style="color: green;">Wall</th>
+                                <th scope="col" class="th" style="color: blue;">Matrix</th>
+                                <th scope="col" class="th" style="color: #F48220;">Reports</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th  style="font-size: 18px;color: darkslategrey;text-align: center;">1</th>
+                                <td style="font-size: 18px;color: green;text-align: center;">2</td>
+                                <td style="font-size: 18px;color: blue;text-align: center;">3</td>
+                                <td style="font-size: 18px;color: #F48220;text-align: center;">3</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-4 xs-mb-30">
+                <div class="blog-box  blog-1 h-100">
+                    <div class="blog-info">
+                        <h4 style="text-align: center;font-size: 30px;"> <a href="#"  class="titulo">Backlog</a></h4>
+                        <hr style="background-color: black; border: 1px solid #ddd;">
+                        <p style="text-align: center;font-size: 75px;">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col" class="prox" style="font-size: 25px;color: darkslategrey;">Prox. Sprint</th>
+                                <th scope="col" class="prox" style="font-size: 25px;color: blue;">Futuro</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th  style="font-size: 18px;color: darkslategrey;"class="prox">QTDE: 112</th>
+                                <td style="font-size: 18px;color: blue;"class="prox">3</td>
+                            </tr>
+
+                            <tr>
+                                <th  style="font-size: 18px;color: darkslategrey;"class="este">Estimativa: 112</th>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                        </p>
+                    </div>
+
+                </div>
+
+
+            </div>
+</section>
+
+
+<section class="our-blog page-section-ptb">
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <div class="blog-box  blog-1 h-100">
+                    <div class="blog-info">
+                        <h4 style="text-align: center;font-size: 30px;"> <a href="#"  class="titulo">Sprint (Aberto)</a></h4>
+                        <hr style="background-color: black; border: 1px solid #ddd;">
+                        <p style="text-align: center;font-size: 75px;">
+
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col" class="th" style="color: darkslategrey;">Lord</th>
+                                <th scope="col" class="th" style="color: green;">Wall</th>
+                                <th scope="col" class="th" style="color: blue;">Matrix</th>
+                                <th scope="col" class="th" style="color: #F48220;">Reports</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th  style="font-size: 18px;color: darkslategrey;text-align: center;">1</th>
+                                <td style="font-size: 18px;color: green;text-align: center;">2</td>
+                                <td style="font-size: 18px;color: blue;text-align: center;">3</td>
+                                <td style="font-size: 18px;color: #F48220;text-align: center;">3</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="blog-box  blog-1 h-100">
+                    <div class="blog-info">
+                        <h4 style="text-align: center;font-size: 30px;"> <a href="#"  class="titulo">Ligações do Dia</a></h4>
+                        <hr style="background-color: black; border: 1px solid #ddd;">
+                        <p style="text-align: center;font-size: 75px;">
+
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col" class="th" style="color: darkslategrey;">Lord</th>
+                                <th scope="col" class="th" style="color: green;">Wall</th>
+                                <th scope="col" class="th" style="color: blue;">Matrix</th>
+                                <th scope="col" class="th" style="color: #F48220;">Reports</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th  style="font-size: 18px;color: darkslategrey;text-align: center;">1</th>
+                                <td style="font-size: 18px;color: green;text-align: center;">2</td>
+                                <td style="font-size: 18px;color: blue;text-align: center;">3</td>
+                                <td style="font-size: 18px;color: #F48220;text-align: center;">3</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 xs-mb-30">
+                <div class="blog-box  blog-1 h-100">
+                    <div class="blog-info">
+                        <h4 style="text-align: center;font-size: 30px;"> <a href="#" class="titulo">Soluções Parciais</a></h4>
+                        <hr style="background-color: black; border: 1px solid #ddd;">
+                        <p style="text-align: center;font-size: 75px;">
+
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col" class="th" style="color: darkslategrey;">Lord</th>
+                                <th scope="col" class="th" style="color: green;">Wall</th>
+                                <th scope="col" class="th" style="color: blue;">Matrix</th>
+                                <th scope="col" class="th" style="color: #F48220;">Reports</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th  style="font-size: 18px;color: darkslategrey;text-align: center;">1</th>
+                                <td style="font-size: 18px;color: green;text-align: center;">2</td>
+                                <td style="font-size: 18px;color: blue;text-align: center;">3</td>
+                                <td style="font-size: 18px;color: #F48220;text-align: center;">3</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-4 xs-mb-30">
+                <div class="blog-box  blog-1 h-100">
+                    <div class="blog-info">
+                        <h4 style="text-align: center;font-size: 30px;"> <a href="#"  class="titulo">SDTI</a></h4>
+                        <hr style="background-color: black; border: 1px solid #ddd;">
+                        <p  style="text-align: center;font-size: 75px;">21 </p>
+                    </div>
+                    <div class="blog-box-img" ></div>
+
+                </div>
+            </div>
+</section>
+
+
+
+<div id="back-to-top"><a class="top arrow" href="#top"><i class="fa fa-angle-up"></i> <span>TOP</span></a></div>
+
+</div>
+
+
+
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/plugins-jquery.js"></script>
+<script>var plugin_path = 'js/';</script>
+<p class="infos2"></p>
+<script src="js/custom.js"></script>
+<script src="js/js.js"></script>
+
+<div class="footer">
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.deshboard {
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 65px;
+    font-weight: 300;
+}
+#elemento {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 25px;
+}
+.desktop div{
+    align-items: center;
+}
+
+.vazio {
+    border: 1px solid gray;
+    width: 210px;
+    height: 48px;
+}
+
+h1 {
+    font-family: Helvetica;
+    color: #F48220;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.dashboard {
+    margin-left: 10px;
+    margin-top: -3px;
+}
+.linha {
+    margin-top: 2px;
+}
+
+.time {
+    display: grid;    
+    grid-template-columns: 210px 210px; 
+    width: 100px;
+    height: 46px;
+}
+
+.time div {
+    display: grid;
+	grid-template-columns:  190px 190px 190px 190px 190px 190px 190px 190px 190px 190px;
+    border: 1px solid gray;
+    width: 190px;
+    height: 48px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 3px;
+}
+
+.funcoes {
+    display: grid;
+}
+
+.funcoes div {
+    display: grid;
+	border: 1px solid gray;
+    width: 190px;
+    height: 120px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 3px;
+    padding-top: 50px;
+}
+
+.times div{
+    align-items: center;
+}
+
+.times div {
+    display: grid;
+	grid-template-columns: 190px 190px 190px 190px 190px 190px 190px 190px 190px 190px;
+    border: 1px solid grey;
+    width: 190px;
+    height: 120px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 3px;
+}
+
+.tabela-backlog {
+    width: 150px ;
+    height: 90px;
+    border: 1px solid black;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.titulo {
+    font-size: 20px;
+}
+
+.number {
+    font-size: 50px
+}
+
+.numberVencimento {
+    font-size: 70px;
+    color: red;
+    animation: piscaPisca 5s infinite;
+    font-weight: 600;
+}
+
+@keyframes piscaPisca {
+    0% { background-color: red;}
+    10% { background-color: red;}
+    20% { background-color: black;}
+    30% { background-color: black;}
+    40% { background-color: red;}
+    50% { background-color: red;}
+    60% { background-color: black;}
+    70% { background-color: black;}
+    80% { background-color: red;}
+    90% { background-color: red;}
+    100% { background-color: black;}
+}
+
+#elemento{
+        width: 297px;
+        height: 36px;
+        animation: go-back 15s infinite alternate;   
+}
+
+@keyframes go-back{
+    from {
+      transform: translateX(1500px);
+    }
+    to {
+      transform: translateX(0);
+    }
+}

@@ -1,0 +1,20 @@
+html, body {
+	overflow-x: hidden;
+}
+
+input[type="text"] {
+	border: none;
+}
+
+.table table-bordered table-3 text-center table-striped {
+	border-collapse: collapse;
+	position: relative;
+}
+
+thead > tr >th {
+    position: sticky;
+    top: 0;	
+}
+
+
+

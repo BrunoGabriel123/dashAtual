@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="HistoryTableProvider.SVNHistoryPage.Revision" value="101"/>
+	<item key="HistoryTableProvider.SVNHistoryPage.Date" value="251"/>
+	<item key="HistoryTableProvider.SVNHistoryPage.Author" value="200"/>
+	<item key="HistoryTableProvider.SVNHistoryPage.Comment" value="500"/>
+	<item key="CommitDialog.location.x" value="379"/>
+	<item key="CommitDialog.location.y" value="212"/>
+	<item key="CommitDialog.size.x" value="1163"/>
+	<item key="CommitDialog.size.y" value="463"/>
+	<item key="CommitDialog.weights.0" value="500"/>
+	<item key="CommitDialog.weights.1" value="500"/>
+	<item key="DifferencesDialog.location.x" value="600"/>
+	<item key="DifferencesDialog.location.y" value="259"/>
+	<item key="DifferencesDialog.size.x" value="721"/>
+	<item key="DifferencesDialog.size.y" value="392"/>
+	<item key="ResolveConflictDialog.lastChoice" value="5"/>
+	<item key="MarkResolvedDialog.location.x" value="687"/>
+	<item key="MarkResolvedDialog.location.y" value="218"/>
+	<item key="MarkResolvedDialog.size.x" value="546"/>
+	<item key="MarkResolvedDialog.size.y" value="454"/>
+	<item key="RevertDialog.location.x" value="698"/>
+	<item key="RevertDialog.location.y" value="264"/>
+	<item key="RevertDialog.size.x" value="525"/>
+	<item key="RevertDialog.size.y" value="385"/>
+	<section name="IgnoreResourcesDialog">
+		<item key="Action" value="0"/>
+	</section>
+	<section name="CommitWizard">
+		<item key="VWeight1" value="500"/>
+		<item key="VWeight2" value="500"/>
+		<item key="ShowCompare" value="false"/>
+	</section>
+</section>

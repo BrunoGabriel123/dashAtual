@@ -1,0 +1,21 @@
+var select = document.getElementById('DashHelpDesk')
+
+select.addEventListener('change', function(){
+	var url = window.location;
+    var valor = select.value;
+    var result = url +"?Parametros=" +  valor ;
+    console.log(result)
+location.href = '#?param1=' + valor;
+})
+
+
+
+
+// adiciona evento quando o usuário selecionar outro valor
+select.change(function() {
+  // pega valor do option selecionado
+  var valor = meu_select.val()
+  alert('Seu valor é: ' + valor);
+  // muda url do navegador
+  location.href = '#?param1=' + valor;
+})

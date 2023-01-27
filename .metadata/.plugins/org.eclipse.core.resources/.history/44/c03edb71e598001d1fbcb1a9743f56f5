@@ -1,0 +1,11 @@
+        var select = document.getElementById('DashHelpDesk');
+        var value = select.options[select.selectedIndex].value;
+        console.log(value);
+
+
+
+var select = document.getElementById('DashHelpDesk')
+
+select.addEventListener('change', function(){
+    console.log(select.value)
+})

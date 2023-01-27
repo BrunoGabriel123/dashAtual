@@ -1,0 +1,345 @@
+<!DOCTYPE html>  
+<html lang="en"> <!--adicionar demanda e projeto na SPRINT-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" type="image/png" href="icons/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+    <script src="https://code.jquery.com/jquery-git.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+</head>
+
+<body>
+    <p id="elemento"></p>
+    <p id="elemento2"></p>
+    <hr class="linha" />
+
+    <h1 class="deshboard">Dashboard Dogo</h1>
+
+    <br><br><br>
+
+    <div class="dashboard">
+        <div class="time">
+            <div class="desktop">
+                <div class="vazio" style="border: 0.5px solid gray;"></div>
+                <div style="font-size:28px;">
+                    Vencidos
+                </div>
+                <div style="font-size:28px; ">
+                    Backlog
+                </div>
+                <div style="font-size:28px;">Sprint</div>
+                <div class="numberVencimento" style="font-size:28px;color: white;" >Urgente</div>
+                <div style="font-size:28px;">Fazendo</div>
+                <div style="font-size:28px;">Teste</div>
+                <div style="font-size:28px;">Feito</div>
+                <div style="font-size:28px;color: white;" class="numberVencimento">Impedimento</div>
+                <div style="font-size:28px;">SDTI</div>
+            </div>
+        </div>
+        <div class="times">
+            <div class="times">
+                <div class="vazio" style="border: 0.5px solid gray;background-color:#bde0fe;font-size: 25px;">Desktop
+                </div>
+                <div class="numberVencimento">
+                    <p class="numberVencimento" style="color: white;">0</p>
+                </div>
+                <div style="background-color:#ccdbdc;">
+                    <table class="tabela-backlog" style="background-color: white;">
+                        <tr>
+                            <th class="titulo">Semana:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="titulo">Mês:</th>
+                            <td>22</td>
+                        </tr>
+
+                        <tr>
+                            <th class="titulo">Demais:</th>
+                            <td>22</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="div" style="background-color:  gainsboro;">
+                    <table class="tabela-backlog" style="background-color: white;">
+                        <tr>
+                            <th class="titulo">Demanda:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="titulo">Projeto:</th>
+                            <td>22</td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="div">
+                    <p class="number">2</p>
+                </div>
+                <div class="div">
+                    <p class="number">1</p>
+                </div>
+                <div class="div">
+                    <p class="number"></p>
+                </div>
+                <div class="div">
+                    <p class="number">1</p>
+                </div>
+                <div class="div">
+                     <p class="number">1</p>
+                </div>
+                <div class="div" style="background-color: #dde5b6;">
+                    <table class="tabela-backlog"style="background-color: white;" >
+                        <tr>
+                            <th class="titulo">Demanda:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="titulo">Projeto:</th>
+                            <td>22</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="times">
+            <div class="times">
+                <div class="vazio" style="border: 0.5px solid gray;background-color: #99e2b4;font-size: 25px;">
+                    Relatórios</div>
+                <div class="numberVencimento">
+                    <p class="numberVencimento" id="numberVencimento" style="color: white;">0</p>
+                </div>
+                <div style="background-color: #ccdbdc;">
+                    <table class="tabela-backlog" style="background-color: white;">
+                        <tr>
+                            <th class="titulo">Semana:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="titulo">Mês:</th>
+                            <td>22</td>
+                        </tr>
+
+                        <tr>
+                            <th class="titulo">Demais:</th>
+                            <td>22</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="div" style="background-color:  gainsboro;">
+                    <table class="tabela-backlog" style="background-color: white;">
+                        <tr>
+                            <th class="titulo">Demanda:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="titulo">Projeto:</th>
+                            <td>22</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div" style="background-color: #dde5b6;">
+                    <table class="tabela-backlog" style="background-color: white;" >
+                        <tr>
+                            <th class="titulo">Demanda:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="titulo">Projeto:</th>
+                            <td>22</td>
+                        </tr>                      
+                    </table>
+                </div>
+                <div class="div"></div>
+            </div>
+        </div>
+
+        <div class="times">
+            <div class="times">
+                <div class="vazio" class="numberVencimento" id="numberVencimento"
+                    style="border: 0.5px solid gray;background-color: #fec5bb;font-size: 30px;font-size: 25px;">Lord of
+                    War</div>
+                <div class="numberVencimento"><p class="numberVencimento" id="numberVencimento"style="color: white;">0</p></div>
+                <div style="background-color:#ccdbdc;" >
+                    <table class="tabela-backlog" style="background-color: white;">
+                        <tr>
+                            <th class="titulo">Semana:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="titulo">Mês:</th>
+                            <td>22</td>
+                        </tr>
+
+                        <tr>
+                            <th class="titulo">Demais:</th>
+                            <td>22</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="div" style="background-color:  gainsboro;">
+                    <table class="tabela-backlog" style="background-color: white;">
+                        <tr>
+                            <th class="titulo">Demanda:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="titulo">Projeto:</th>
+                            <td>22</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="div" id="numberVencimento"></div>
+                <div class="div" id="numberVencimento"></div>
+                <div class="div" id="numberVencimento"></div>
+                <div class="div" id="numberVencimento"></div>
+                <div class="div" id="numberVencimento"></div>
+                <div class="div" style="background-color: #dde5b6;">
+                    <table class="tabela-backlog"style="background-color: white;" >
+                        <tr>
+                            <th class="titulo">Demanda:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="titulo">Projeto:</th>
+                            <td>22</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="times">
+            <div class="times">
+                <div class="vazio" style="border: 0.5px solid gray;background-color: #b8f2e6;font-size: 25px;">Wall
+                    Street</div>
+                <div class="numberVencimento">
+                    <p class="numberVencimento" id="numberVencimento" style="color: white;">0</p>
+                </div>
+                <div style="background-color: #ccdbdc;">
+                    <table class="tabela-backlog" style="background-color: white;">
+                        <tr>
+                            <th class="titulo">Semana:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="titulo">Mês:</th>
+                            <td>22</td>
+                        </tr>
+
+                        <tr>
+                            <th class="titulo">Demais:</th>
+                            <td>22</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="div" style="background-color:gainsboro;">
+                    <table class="tabela-backlog" style="background-color: white;">
+                        <tr>
+                            <th class="titulo">Demanda:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="titulo">Projeto:</th>
+                            <td>22</td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div" style="background-color: #dde5b6;">
+                    <table class="tabela-backlog"style="background-color: white;" >
+                        <tr>
+                            <th class="titulo">Demanda:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="titulo">Projeto:</th>
+                            <td>22</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="times">
+            <div class="times">
+                <div class="vazio" style="border: 0.5px solid gray;background-color: #adb5bd;font-size: 25px;">
+                    Matrix</div>
+                <div class="numberVencimento"><p class="numberVencimento" id="numberVencimento" style="color: white;">0</p></div>
+                <div style="background-color: #ccdbdc;">
+                    <table class="tabela-backlog" style="background-color: white;">
+                        <tr>
+                            <th class="titulo">Semana:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="titulo">Mês:</th>
+                            <td>22</td>
+                        </tr>
+
+                        <tr>
+                            <th class="titulo">Demais:</th>
+                            <td>22</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="div" style="background-color:  gainsboro;">
+                    <table class="tabela-backlog" style="background-color: white;">
+                        <tr>
+                            <th class="titulo">Demanda:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="titulo">Projeto:</th>
+                            <td>22</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div" style="background-color: #dde5b6;">
+                    <table class="tabela-backlog"style="background-color: white;" >
+                        <tr>
+                            <th class="titulo">Demanda:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="titulo">Projeto:</th>
+                            <td>22</td>
+                        </tr>
+
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="vencidos">
+
+        </div>
+    </div>
+
+    <div class="graficos">
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

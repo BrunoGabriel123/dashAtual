@@ -1,0 +1,12 @@
+html, body {
+	overflow-x: hidden;
+}
+
+input[type="text"] {
+	border: none;
+}
+thead {
+	position: sticky;
+    top: 0;
+}
+

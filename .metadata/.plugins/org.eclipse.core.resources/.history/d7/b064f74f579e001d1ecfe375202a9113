@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>br.com.dogo</groupId>
+	<artifactId>HelpDeskDashboard</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	
+	<developers>
+		<developer>
+			<id>bruno.o</id>
+			<name>Bruno Oliveira</name>
+			<organization />
+			<roles>
+				<role>Web Developer</role>
+			</roles>
+			<email>bruno.oliveira@dogo.com.br</email>			
+		</developer>
+		<developer>
+			<id>patrick.b</id>
+			<name>Patrick Bezerra</name>
+			<organization />
+			<roles>
+				<role>Tech Lead</role>
+			</roles>
+			<email>patrick.bezerra@dogo.com.br</email>			
+		</developer>
+		<developer>
+			<id>rafael.santos</id>
+			<name>Rafael Leandro dos Santos</name>
+			<organization />
+			<roles>
+				<role>CTO</role>
+			</roles>
+			<email>rafael.santos@dogo.com.br</email>			
+		</developer>
+	</developers>	
+	
+	<dependencies>
+		<!-- Own dependencies -->	
+		<dependency>
+		    <groupId>br.com.dogo</groupId>
+			<artifactId>jflparametros</artifactId>
+			<version>2022.12.12.000</version>
+		</dependency>
+
+		<!-- Specifications Dependencies -->
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>4.0.1</version>
+		    <scope>provided</scope>
+		</dependency>
+		
+		<!-- Third part Dependencies -->
+		<dependency>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <version>1.18.22</version>
+		    <scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>ch.qos.logback</groupId>
+		    <artifactId>logback-classic</artifactId>
+		    <version>1.4.5</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			  <groupId>commons-lang</groupId>
+			  <artifactId>commons-lang</artifactId>
+			  <version>2.5</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+			
+	</dependencies>
+	
+	<build>
+		<finalName>HelpDeskDashboard</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

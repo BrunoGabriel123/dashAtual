@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<%@page import="br.com.dogo.helpdeskdashboard.workday.dto.widgets.TicketPorParceiroDTO"%>
+<%@page import="br.com.dogo.helpdeskdashboard.workday.dto.widgets.TicketPorCategoriaDTO"%>
+<%@page import="br.com.dogo.helpdeskdashboard.workday.controller.DashboardWorkdayController"%>
+<%@page import="br.com.dogo.helpdeskdashboard.workday.dto.widgets.TicketDTO"%>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" type="image/png" href="icons/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+   	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+   	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+   	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>   		
+</head>
+
+<style>
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    background-color: #201f1b;
+}
+
+html, body {
+	overflow-x: hidden;
+}
+
+
+#elemento {
+    font-size: 1.5rem;
+}
+
+.dashboard {
+    margin-top: 20rem;
+    width: 90%;
+    height: 53rem;
+    border: 2px solid #CCC6BA;
+    margin: auto;
+    align-items: center;
+    background-color: #201f1b;
+}
+
+.grid {
+    margin-left: 59px;
+    display: grid;
+    grid-template-columns:  25% 25% 25% 25%; 
+    background-color: #201f1b;
+}
+.topo {
+    width: 100%;
+    height: 12rem;
+    margin-bottom: 2px solid black;
+
+}
+.quadrado {
+    border-radius: 10px;
+    width: 22.5rem;
+    height: 14rem;
+    background-color: #3F3C37;
+    border: 2px solid #FF5E1E;
+}
+
+.titulo {
+    margin-top: 10px;
+    background-color: #3F3C37;
+    color: #CCC6BA;
+    align-items: center;
+    text-align: center;
+    font-size: 35px;
+}
+
+.linha  {
+    background-color:  #FF5E1E;
+}
+
+.numero {
+    font-size: 6em;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #3F3C37;
+    color: #CCC6BA;
+    font-weight: 700;
+}
+
+table , .table{
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+    width: 314px;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+.info {   
+    font-size: 3em;
+    color: #CCC6BA;
+    padding: 20px;
+    margin-top: 40px;
+}
+.informacoes {
+    font-size: 3em;
+    color: #CCC6BA;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.sprint  {
+    font-size: 25px;
+    color: #CCC6BA;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.futuro {
+    font-size: 25px;
+    color: #CCC6BA;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.tecDia {
+    width: 65%;
+    display : flex;
+    flex-direction:row;
+    
+}
+.topo {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.empresa {
+    width: 15%;
+}
+
+.categoria {
+    width: 15%;
+}
+
+.tituloTopo {
+    margin-top: 10px;
+    color: #CCC6BA;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+}
+
+.ticketsDia {
+    color: #CCC6BA;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.infoDia {
+    margin-top: 10px;
+    color: #CCC6BA;
+    font-size: 15px;
+    margin-left: 15px;
+    width: 130px;
+    height: 274px;
+    font-size: 25px;
+}
+
+.infoUltimo {
+    margin-top: 10px;
+    color: #CCC6BA;
+    font-size: 15px;
+    margin-left: 15px;
+    width: 343px;
+    height: 274px;
+    font-size: 25px;
+}
+
+#linha-vertical {
+    height: 295px;
+    border-right: 1px solid #CCC6BA;
+}
+ .table {
+    overflow:auto;
+    text-align:justify;
+}
+
+.infos , .table{
+	margin-left: 18px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+    display: flex;
+    height: 20em;
+	width: 65em;
+    height: 24em;
+}
+
+#linha-vertical {
+    height: 27em;
+    border-right: 2px solid #CCC6BA;
+}
+
+tbody tr td {
+    font-size: 15px;
+}
+
+.loremRestante {
+    font-size: 15px;
+}
+
+.loremIpsun {
+    max-width: 34ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 18px;
+}
+
+::-webkit-scrollbar {
+    width: 9px;    
+    background-color: #201f1b;           
+}
+  
+::-webkit-scrollbar-track {
+    background: #CCC6BA;        
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #FF5E1E; 
+    border-radius: 10px;       
+    border: 3px solid #FF5E1E;  
+}
+
+@keyframes piscaPisca {
+    0% { background-color: red;}
+    10% { background-color: red;}
+    20% { background-color: white;}
+    30% { background-color: white;}
+    40% { background-color: red;}
+    50% { background-color: red;}
+    60% { background-color: white;}
+    70% { background-color: white;}
+    80% { background-color: red;}
+    90% { background-color: red;}
+    100% { background-color: white;}
+}
+
+.js-style-inicial {
+    background:#3F3C37 !important;
+    color: #CCC6BA !important;
+}
+#tableTestando  {
+    margin-left: 2rem;
+}
+#tableTestando2 {
+    margin-left: 0;
+}
+
+@media (min-width:200px) and (max-width: 500px) {
+    .quadrado {
+        width: 14.5rem !important;
+    }
+
+    table {
+        width: 191px;
+    }
+
+    .text {
+        margin-left: 19px !important;
+    }
+
+    td {
+        font-size: 20px !important;
+    }
+
+    .aria {
+        margin-left: 22px;
+    }
+
+    #tb {
+        display: none;
+    }
+
+	.quadrado quadradoInicial {
+    	width: 10.5rem;
+        height: 12rem; 
+    }
+
+    .grid {
+        margin-left: 59px;
+        display: grid;
+        grid-template-columns: 25%;
+        background-color: #201f1b;
+        gap: 60px;
+    }
+
+    
+    #tableTestando  {
+        margin-left: -11rem !important;
+        width: 123px !important;
+    }
+
+    .tituloTopo {
+        margin-left: -19rem !important;
+        font-size: 18px !important;
+        
+    }
+
+    #tituloTopico {
+        margin-left: -130px !important;
+        margin-left: 12px !important;
+    }
+
+    .empresa  {
+        width: 2% !important;
+    }
+
+    .tecDia {
+        width: 58% !important;
+    }
+
+    #tableTestando2 {
+        width: 121px !important;
+    }
+
+    #elemento {
+        font-size: 15px !important;
+    }
+
+    #tableTestando td {
+        font-size: 13px !important;
+    }
+
+    #tableTestando2 td {
+        font-size: 13px !important;
+    }
+    
+    #etest {
+        margin-top: -1px !important;
+    }
+
+    .testy {
+        margin-top: -1px !important;
+    }
+
+    #esse {
+        margin-left: 18% !important;
+    }
+}
+
+
+@media(min-width: 500px) and (max-width: 800px) {
+    #tb {
+        display: none;
+    }
+
+    .tecDia {
+        width: 23%;     
+    }
+
+    .tableTestando {
+        margin-left: -6rem !important;
+        width: 165px !important;
+    }
+
+    .tableTestando2 {
+        width: 236px !important;
+        margin-left: 3rem !important;
+    }
+
+    .grid {
+        margin-left: 59px;
+        display: grid;
+        grid-template-columns: 25%;
+        background-color: #201f1b;
+        gap: 60px;
+    }
+
+    #tituloTopico {
+        margin-left: 2rem !important;
+    }
+}
+
+@media(min-width: 800px) and (max-width: 1000px) {
+    #tb {
+        display: none;
+    }
+
+    .tecDia {
+        width: 20% !important;
+    }
+
+    #tableTestando {
+        margin-left: -6rem !important;
+    }
+
+    #tituloTopico {
+        margin-left: 6rem !important;
+    }
+
+    table {
+        width: 211px !important;
+    }
+
+    .testy {
+        margin-top: -9px !important;
+    }
+
+    #etest {
+        margin-top: -4px !important;
+    }
+
+    #tableTestando2 {
+        margin-left: 58px !important;
+    }
+}
+
+/*@media(max-width:700px) {
+    .tituloTopo {
+        margin-left: -33rem;
+    }
+   
+     .table{    
+        margin-left: -13rem !important;
+   }
+
+   #tableTestando2 {
+     margin-left: -18rem;
+   }
+
+	.quadrado quadradoInicial {
+    	width: 10.5rem;
+        height: 12rem; 
+    }
+
+    .grid {
+        margin-left: 59px;
+        display: grid;
+        grid-template-columns: 25%;
+        background-color: #201f1b;
+        gap: 60px;
+    }
+
+    .testando td{
+        font-size: 10px;
+    }
+
+    .textoText {
+        padding-left: 1px;
+        font-size:    15px;
+    } 
+
+    .tecDia {
+        width: 75%; 
+    }
+
+    .empresa {
+        margin-top: 160rem;
+        margin-left: -5rem;
+    }
+
+    .empresa .tituloTopo {
+        margin-left: -35rem;
+        margin-top :  20px;
+    }
+
+    .categoria {
+        margin-top: 185rem;
+    }
+
+    #grid2 {
+        margin-top: 6em;
+    }
+ 
+    .tituloTopo {
+        margin-left: -35rem;
+    }
+
+    .test1 {
+        padding-left: 11px;
+    }
+
+    .test2 {
+        padding-left: 15px;
+    }
+
+    .test3 {
+        padding-left: 13px;
+    }
+
+    .test4 {
+        padding-left: 13px;
+    }
+}*/
+
+
+@media(min-width:800px) and (max-width: 1000px) {
+    .quadrado {
+        width: 16.5rem;
+    }
+
+    .grid {
+        margin-left: 59px;
+        display: grid;
+        grid-template-columns: 25% 25%;
+        background-color: #201f1b;
+        gap: 90px;
+    }
+
+    .text {
+        margin-left: 28px !important;
+        width: 219px !important;
+    }
+
+    .border {
+         width: 217px !important;
+    }
+
+    .aria {
+        width: 213px;
+    }
+
+    .info td {
+        font-size: 20px !important;
+    }
+
+
+    #tableTestando2 {
+        width: 162px !important;
+        margin-left: 0rem !important;
+    }
+
+    #esse {
+    margin-left: 35px !important;
+    }
+}
+
+@media(min-width:1000px) and (max-width: 1500px) {
+    .quadrado {
+        width: 19.5rem;
+    }
+
+    table {
+        width: 267px !important;
+    }
+}
+
+.informacoes  td {
+    padding-left: 20px !important;
+}
+@media(min-width: 200px) and (max-width: 300px) {
+
+}
+
+</style>
+
+<%@page import="br.com.dogo.helpdeskdashboard.*"%>
+<%@page import="java.util.*"%>
+<%@page import="br.com.dogo.helpdeskdashboard.workday.*"%>
+<%@page import="br.com.dogo.helpdeskdashboard.workday.dto.*"%>
+<body>
+	<div class="inicio" >
+	<p id="elemento" style="color: #CCC6BA;font-size: 35px;"></p>
+    <p id="elemento2"></p>
+	</div>
+
+	<hr class="linha" />
+    <br>
+        <div class="topo">
+            <div class="tecDia">
+                <div class="infos" id="tb" style="width: 75em;">                  
+                    <table class="table2" id="table2" style="margin-left: 43px; overflow-x: hidden; overflow-y: auto;
+   ">
+					<tr style="color: #FF5E1e; font-size: 35px;" class="testando">
+					<hr class="linha" style="display:none;">
+						<td class="textoText"  style="font-size: 21px;">Ticket</td>
+						<td class="textoText" id="test1"    style="font-size: 21px;padding-left: 11px;">Cliente</td>
+						<td class="textoText" id="test2" style="padding-left:38px;font-size: 21px;">Status</td>
+						<td class="textoText" id="test3"style="padding-left:53px;font-size: 21px;">Dono</td>
+						<td class="textoText" id="test4" style="padding-left:54px;font-size: 21px;">Prioridade</td>
+						<td class="textoText" id="test5" style="padding-left:47px;font-size: 21px;">Texto</td>
+					</tr>
+<%
+
+DashboardWorkdayController controller = new DashboardWorkdayController();
+HelpdeskDashboardWorkdayDTO dashboardCarregada = controller.loadWorkdayData(null);
+
+for(TicketDTO dash : dashboardCarregada.getTickets()) {
+%>
+
+					<tr style="overflow: hidden;white-space: nowrap; font-size: 18px; color: #CCC6BA;">
+						
+						<td style="font-size:15px;"><%=dash.getNumber()%></td>
+						<td style="font-size:15px;padding-left: 12px;"><%=dash.getPartnerName()%></td>
+						<td style="font-size:15px;padding-left: 38px;"><%=dash.getStatus()%></td>
+						<td style="font-size:15px;padding-left: 53px;"><%=dash.getOwner()%></td>
+						<td style="font-size:15px;padding-left: 50px;"><%=dash.getPrecedence()%></td>
+						<td style="font-size:15px;padding-left: 48px;"><%=dash.getText()%></td>
+					</tr>
+<% 
+}
+%>
+		
+				
+				</table>             
+                              
+                    
+               </div>
+          </div>
+		
+            <div class="empresa">
+                <p class="tituloTopo" style="color: #FF5E1E; margin-left: -8rem;">Empresa</p>    
+                <table class="tableTestando" id="tableTestando" style="margin-left: 2rem;width:208px;background-color: white;font-size: 10px; height: 305px;background-color: #3F3C37;  color: #CCC6BA;">
+<%
+   for(TicketPorParceiroDTO dash : dashboardCarregada.getTicketsPorParceiro()) {
+%>
+                    
+                    
+                    <tr>
+                        <td><%=dash.getPartnerName()%></td>
+                        <td style="padding-left: 10px;    padding-right: 8px;">
+                        	<%=dash.getValue()%>
+                      </td>
+                        
+                    </tr>
+<%
+   }
+%>       
+
+                </table>
+            </div>
+            <div class="categoria">
+                <p class="tituloTopo" id="tituloTopico" style="margin-left: -11rem;color: #FF5E1E;">Categoria</p>
+                <table class="table" id="tableTestando2" style="margin-left: 0rem;width: 280px;background-color: white;font-size: 20px; height: 305px;background-color: #3F3C37;  color: #CCC6BA;">
+
+<%
+   for(TicketPorCategoriaDTO categoria : dashboardCarregada.getTicketsPorCategoria()) {
+%>
+                    
+                    <tr>
+                        <td><%=categoria.getCategoryName()%></td>
+                      <td style="padding-left: 65px;">
+                        	<%=categoria.getValue()%>
+                      </td>
+                        
+                    </tr>
+<%
+   }
+%>    
+                  
+                    <tr class="infos" style="display: none;"></tr>
+                </table>
+            </div>
+        </div>
+
+
+
+        <br><br><br><br><br><br><br> <br><br>
+        <div class="grid" style="margin-top: 3em;">
+            <div class="quadrado quadradoInicial" style="margin-left: 4px;color: red;animation: piscaPisca 5s infinite;font-weight: 600;"  id="numberVencimento">
+            	<span style="background-color: #3F3C37">
+            	<div class="nInicial2" style="color: red;font-weight: 600;"  id="numberVencimento" >
+            		<div style="background-color: #3F3C37">
+            		 <p class="titulo" style="background-color: #3F3C37;margin-top:0;padding-top: 10px;color: #FF5E1E;" >Inicial</p>
+            		</div>
+            		 </span>
+                	<hr class="linha" style="color: #FF5E1E;">
+					
+				
+							<div class="numero nInicial" style="color: #3F3C37;animation: piscaPisca 5s infinite;font-weight: 600;" >
+								<span id="numberInicial"><%=dashboardCarregada.getTicketsInicial()%></span>
+							</div> 
+		</div>            
+            </div>
+            
+           
+            <div class="quadrado" style="margin-left: 2px;color: red;animation: piscaPisca 5s infinite;font-weight: 600;"  id="numberVencimento" >
+				<span style="background-color: #3F3C37">
+                <p class="titulo" style="background-color: #3F3C37;margin-top:0;padding-top: 10px;color: #FF5E1E;">Vencidos</p>
+				</span>
+                <hr class="linha">
+                <table id="esse"  style="margin-top: 10px;    
+                margin-left: 2px;margin-left: 61px;height: 145px;    ">
+                    <tr class="sprint" >
+                        <td style="font-size: 30px; color: #3F3C37;">Dogo</td>
+                        <td style="font-size:30px; color: #3F3C37;">Cliente</td>
+                    </tr>
+                    <tr class="futuro">
+
+                        <td style="font-size: 30px;color: #3F3C37;">&nbsp;&nbsp;<%=dashboardCarregada.getTicketsVencidos().getDogo()%> <br>
+         
+                        </td>                      
+                        <td style="font-size: 30px;color: #3F3C37;">&nbsp;&nbsp;<%=dashboardCarregada.getTicketsVencidos().getClientes()%></td>
+                    </tr>
+                </table>   
+                
+            </div>
+			
+            <div class="quadrado quadradoUrgente" style="margin-left: 2px;">
+                <p class="titulo" style="color: #FF5E1E;font-weight: 600;">Urgente</p>
+                <hr class="linha">
+                  <table class="aria" style="margin-left: 33px;margin-top:10px;">
+                    <tr class="info">
+                    	<td style="font-size: 30px;">Anterior</td>
+                        <td style="font-size: 30px;">Atual</td>
+                        <td style="font-size: 30px;">Dia</td>
+                    </tr>
+                    <tr class="informacoes">
+                        <td style="font-size: 25px;"><%=dashboardCarregada.getTicketsUrgentes().getSprintAnterior()%></td></td>
+                        <td style="font-size: 25px;"><%=dashboardCarregada.getTicketsUrgentes().getSprintAtual()%></td></td>
+                        <td style="font-size: 25px;"><%=dashboardCarregada.getTicketsUrgentes().getDia()%></td></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="quadrado quadradoBacklog" style="margin-left: 2px;">
+                <p class="titulo" style="color: #FF5E1E;font-weight: bold;font-weight: 600;">Backlog</p>
+                <hr class="linha">
+<<<<<<< .mine
+                <table border="2" style="margin-top: 10px;margin-left: 2px;margin-left: 23px;height: 145px;">
+||||||| .r3385
+                <table border="2" style="margin-top: 10px;    
+                margin-left: 2px;margin-left: 23px;height: 145px;">
+=======
+                <table style="margin-top: 10px; margin-left: 2px; margin-left: 23px;height: 145px;">
+>>>>>>> .r3386
+                    <tr class="sprint">
+                        <td style="font-size: 20px;">Prox. Sprint</td>
+                        <td style="font-size: 20px;">Futuro</td>
+                    </tr>
+                    <tr class="futuro">
+                        <td style="font-size: 20px;">Qtde &nbsp;&nbsp;<%=dashboardCarregada.getTicketsPorBacklog().getFutureSprints()%> <br><br>
+                            Estimativa&nbsp;&nbsp;&nbsp;<%=dashboardCarregada.getTicketsPorBacklog().getNextSprint().getCount()%>
+                        </td>                      
+                        <td style="font-size: 20px;">&nbsp;<%=dashboardCarregada.getTicketsPorBacklog().getNextSprint().getTicketsPoints()%></td>
+                    </tr>
+                </table>    
+            </div>
+        </div>
+        <br>
+        <div class="grid">
+            <div class="quadrado quadradoSprint" style="margin-left: 4px;">
+                <p class="titulo" style="color: #FF5E1E;font-weight: 600;font-weight: bold;">Sprint (Em aberto)</p>
+                <hr class="linha">
+                
+                <table style="margin-left: 47px;margin-top:10px;">
+                    <tr class="info">
+                        <td style="font-size: 30px;">Prod</td>
+                        <td style="font-size: 30px;">Dev</td>
+						<td style="font-size: 30px;">Adm</td>
+                    </tr>
+                    <tr class="informacoes">
+                        <td style="font-size: 25px;"><%=dashboardCarregada.getTicketsPorSprint().getProduct()%></td>
+                        <td style="font-size: 25px;"><%=dashboardCarregada.getTicketsPorSprint().getDevelopment()%></td>
+						<td style="font-size: 25px;"><%=dashboardCarregada.getTicketsPorSprint().getAdministration()%></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="quadrado quadradoDia" style="margin-left: 2px;">
+                <p class="titulo" style="color: #FF5E1E;font-weight: bold;font-weight: 600;">Liga&ccedil;&otilde;es  do Dia</p>
+                <hr class="linha" style="color: #FF5E1E;">
+                 <table class="testy"  style="margin-left: 3rem;margin-top:10px;">
+                    <tr class="info">
+                        <td style="font-size: 30px;">Lord</td>
+                        <td style="font-size: 30px;">Wall</td>
+                        <td style="font-size: 30px;">Matrix</td>
+                    </tr>
+                    <tr class="informacoes">
+                        <td style="font-size: 25px;"><%=dashboardCarregada.getLigacoesPorDia().getCountLordOfWar()%></td>
+                        <td style="font-size: 25px;"><%=dashboardCarregada.getLigacoesPorDia().getCountWallStreet()%></td>
+                        <td style="font-size: 25px;"><%=dashboardCarregada.getLigacoesPorDia().getCountMatrix()%></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="quadrado quadradoParcial" style="margin-left: 2px;">
+                <p class="titulo" style="color: #FF5E1E;font-weight: bold;font-weight: 600;">Solu&ccedil;oes Parciais</p>
+                <hr class="linha">
+                <table id="etest" style="margin-left: 3rem;margin-top:10px;">
+                    <tr class="info">
+                        <td style="font-size: 30px;">Lord</td>
+                        <td style="font-size: 30px;">Wall</td>
+                        <td style="font-size: 30px;">Matrix</td>
+                    </tr>
+                    <tr class="informacoes">
+                        <td style="font-size: 25px;"><%=dashboardCarregada.getSolucoesParciais().getCountLordOfWar()%></td>
+                        <td style="font-size: 25px;"><%=dashboardCarregada.getSolucoesParciais().getCountWallStreet()%></td>
+                        <td style="font-size: 25px;"><%=dashboardCarregada.getSolucoesParciais().getCountMatrix()%></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="quadrado" style="margin-left: 2px;">
+                <p class="titulo" style="color: #FF5E1E;font-weight: bold;font-weight: 600;">SDTI</p>
+                <hr class="linha">
+                <div class="numero" id="numberSDTI"><%=dashboardCarregada.getSdti()%></div>
+            </div>
+        </div>
+        
+    <p class="infos2"></p>
+        
+	<script charset="UTF-8" src="./script.js">
+     
+</script>
+</body>
+</html>

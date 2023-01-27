@@ -1,0 +1,66 @@
+/*var select = document.getElementById('DashHelpDesk')
+
+select.addEventListener('change', function(){
+	var url = window.location;
+	var valor = select.value;
+	var result = url +"?Parametros=" +  valor ;
+	console.log(result)
+	location.href = '?Parametros=' + valor;
+})
+
+
+
+
+// adiciona evento quando o usuário selecionar outro valor
+select.change(function() {
+  // pega valor do option selecionado
+  var valor = meu_select.val()
+  alert('Seu valor é: ' + valor);
+  // muda url do navegador
+  location.href = '#?param1=' + valor;
+})*/
+
+
+function selecionar() {
+
+	var pacote = document.getElementsByClassName('.form-check-input');
+	for (var i = 0; i < pacote.length; i++) {
+		if (pacote[i].checked) {
+			if (pacote[i].value == "adm") {
+				var Pacote_i = "adm";
+				console.log("adm")
+			} else if (pacote[i].value == "cli") {
+				var Pacote_ii = "cli";
+				console.log("cli")
+			} else if (pacote[i].value == "com") {
+				var Pacote_iii = "com";
+				console.log("com")
+			} else if (pacote[i].value == "dba") {
+				var Pacote_iii = "dba";
+				console.log("dba")
+			} else if (pacote[i].value == "dir") {
+				var Pacote_iii = "dir";
+				console.log("dir")
+			} else if (pacote[i].value == "dkt") {
+				var Pacote_iii = "dkt";
+				console.log("dkt")
+			} else if (pacote[i].value == "inf") {
+				var Pacote_iii = "inf";
+				console.log("inf")
+			} else if (pacote[i].value == "inv") {
+				var Pacote_iii = "inv";
+				console.log("inv")
+			} else if (pacote[i].value == "prd") {
+				var Pacote_iii = "prd";
+				console.log("prd")
+			} else if (pacote[i].value == "qa") {
+				var Pacote_iii = "qa";
+				console.log("qa")
+			} else if (pacote[i].value == "rel") {
+				var Pacote_iii = "rel";
+				console.log("rel")
+			} 
+		}
+	}
+
+}
